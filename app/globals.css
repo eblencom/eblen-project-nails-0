@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 30 20% 98%;
+  --foreground: 20 10% 15%;
+  --card: 30 20% 97%;
+  --card-foreground: 20 10% 15%;
+  --popover: 30 20% 98%;
+  --popover-foreground: 20 10% 15%;
+  --primary: 350 40% 72%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 30 15% 94%;
+  --secondary-foreground: 20 10% 15%;
+  --muted: 30 15% 94%;
+  --muted-foreground: 20 8% 50%;
+  --accent: 40 60% 65%;
+  --accent-foreground: 20 10% 15%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 30 15% 90%;
+  --input: 30 15% 90%;
+  --ring: 350 40% 72%;
+  --radius: 1rem;
+  --gold: 40 60% 65%;
+  --gold-light: 40 50% 85%;
+  --blush: 350 40% 72%;
+  --blush-light: 350 30% 92%;
+  --milk: 30 20% 96%;
+  --cream: 35 25% 93%;
+  --shadow-glass: 0 8px 32px 0 hsla(350, 40%, 72%, 0.08);
+  --shadow-lift: 0 20px 40px -12px hsla(20, 10%, 15%, 0.1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-blush: hsl(var(--blush));
+  --color-blush-light: hsl(var(--blush-light));
+  --color-milk: hsl(var(--milk));
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  @apply border-border;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+.glass-card {
+  background: hsla(30, 20%, 98%, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsla(30, 15%, 90%, 0.5);
+  box-shadow: var(--shadow-glass);
+}
+
+.gold-line {
+  width: 1px;
+  height: 2rem;
+  background: linear-gradient(180deg, transparent, hsl(var(--gold)), transparent);
+}
+
+.gold-line-h {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+}
+
+.gradient-blush {
+  background: linear-gradient(180deg, hsl(var(--background)), hsl(var(--blush-light)));
+}
+
+.btn-blush {
+  @apply inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-medium tracking-wide transition-all duration-300;
+  background: hsl(var(--blush));
+  color: hsl(0 0% 100%);
+}
+
+.btn-blush:hover {
+  background: hsl(350 45% 65%);
+  box-shadow: 0 8px 24px -4px hsla(350, 40%, 72%, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline-blush {
+  @apply inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-medium tracking-wide transition-all duration-300;
+  border: 1.5px solid hsl(var(--blush));
+  color: hsl(var(--blush));
+  background: transparent;
+}
+
+.btn-outline-blush:hover {
+  background: hsl(var(--blush-light));
+  transform: translateY(-2px);
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeUp 0.8s ease-out 0.15s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeUp 0.8s ease-out 0.3s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fadeUp 0.8s ease-out 0.45s both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
