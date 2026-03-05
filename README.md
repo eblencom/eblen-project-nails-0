@@ -1,4 +1,4 @@
-A landing website for a manicurist in Minsk, built with Next.js, TypeScript, and Tailwind CSS. The project features a modern design, responsive layout, and lightweight animation, perfect for mobile and desktop devices.
+💅 A landing website for a manicurist in Minsk, built with Next.js, TypeScript, and Tailwind CSS. The project features a modern design, responsive layout, and lightweight animation, perfect for mobile and desktop devices.
 
 🎯 Who is it for
 This template is perfect for:
@@ -8,7 +8,7 @@ This template is perfect for:
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Веб-сайт для мастера маникюра в Минске, созданный с использованием Next.js, TypeScript и Tailwind CSS. Проект отличается современным дизайном, адаптивной версткой и легкой анимацией, идеально подходящей для мобильных и настольных устройств.
+💅 Веб-сайт для мастера маникюра в Минске, созданный с использованием Next.js, TypeScript и Tailwind CSS. Проект отличается современным дизайном, адаптивной версткой и легкой анимацией, идеально подходящей для мобильных и настольных устройств.
 
 🎯 Для кого предназначен этот шаблон? Он идеально подходит для: 
 - Специалистов индустрии красоты (маникюр, педикюр, косметология); 
